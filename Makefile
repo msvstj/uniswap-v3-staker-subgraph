@@ -1,16 +1,12 @@
 o?=$(o)
 
-rinkeby:
-	o=rinkeby $(MAKE) deploy
-
-mainnet:
-	o=mainnet $(MAKE) deploy
+mumbai:
+	o=mumbai $(MAKE) deploy
 
 deploy:
 	npm run codegen:$(o)
 	npm run build:$(o)
 	npm run deploy:$(o)
 
-.PNOHY: rinkeby \
-	mainnet \
+.PNOHY: mumbai \
 	deploy

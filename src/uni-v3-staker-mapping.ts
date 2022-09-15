@@ -48,19 +48,40 @@ export function handleIncentiveEnded(event: IncentiveEnded): void {
 
 export function handleRewardClaimed(event: RewardClaimed): void {}
 
+//Adding incentive to the array.
 export function handleTokenStaked(event: TokenStaked): void {
   let entity = Position.load(event.params.tokenId.toHex());
   if (entity != null) {
     entity.staked = true;
     entity.liquidity = event.params.liquidity;
+
+    if(entity.stakedIncentives != null){
+        let stakedIncentivesArray = entity.stakedIncentives;
+        stakedIncentivesArray.push(event.params.incentiveId);
+        entity.stakedIncentives = stakedIncentivesArray;
+    }else{
+        entity.stakedIncentives = [event.params.incentiveId]
+    }
     entity.save();
   }
-}
 
+}
+//Removing incentive from the array.
 export function handleTokenUnstaked(event: TokenUnstaked): void {
   let entity = Position.load(event.params.tokenId.toHex());
   if (entity != null) {
     entity.staked = false;
+
+    if(entity.stakedIncentives != null){
+      let stakedIncentivesArray = entity.stakedIncentives;
+      let index = stakedIncentivesArray.indexOf(event.params.incentiveId);
+
+      if(index !== -1){
+        stakedIncentivesArray.splice(index, 1);
+      }
+
+      entity.stakedIncentives = stakedIncentivesArray;
+    }
     entity.save();
   }
 }
@@ -73,3 +94,4 @@ export function handleDepositTransferred(event: DepositTransferred): void {
     entity.save();
   }
 }
+

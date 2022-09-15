@@ -17,4 +17,8 @@ type Position @entity {
   oldOwner: Bytes
   liquidity: BigInt!
   approved: Bytes
+  token0: Bytes!
+  token1: Bytes!
+  fee: BigInt!
+  stakedIncentives: [Bytes!]
 }

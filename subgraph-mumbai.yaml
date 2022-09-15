@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: NFTPositionsManager
-    network: rinkeby
+    network: mumbai
     source:
-      address: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88'
+      address: '0xc36442b4a4522e871399cd717abdd847ab11fe88'
       abi: NFTPositionsManager
-      startBlock: 8528046
+      startBlock: 22908470
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -39,11 +39,11 @@ dataSources:
       file: ./src/nft-positions-manager-mapping.ts
   - kind: ethereum/contract
     name: UniV3Staker
-    network: rinkeby
+    network: mumbai
     source:
-      address: '0xc462aB5e66067153Bf1B368493E4744C1cA4BeC9'
+      address: '0xe34139463bA50bD61336E0c446Bd8C0867c6fE65'
       abi: UniV3Staker
-      startBlock: 8894474
+      startBlock: 22910316
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
