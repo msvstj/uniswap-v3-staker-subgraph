@@ -7,7 +7,7 @@ Main differences from the forked repository:
 <br>
 ![img](https://gateway.pinata.cloud/ipfs/QmeerkwfgCLQW1bqkot34QEQhja2SZGRJKtAdQhmvGuXXL/)
 
-- **Network:** switched to mumbai testnet
+- **Network:** switched to mumbai/goerli testnets.
 - **Schema update:** 
     - **Positions**: (mapped using Position view. Mapping logic referenced from: [Uniswap V3](https://github.com/Uniswap/v3-subgraph/blob/main/src/mappings/position-manager.ts) and applied in [nft-positions-manager-mapping.ts](./src/nft-positions-manager-mapping.ts)). 
     <br> Added fields:

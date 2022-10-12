@@ -4,7 +4,10 @@
   "scripts": {
     "codegen:mumbai": "graph codegen -- subgraph-mumbai.yaml",
     "build:mumbai": "graph build -- subgraph-mumbai.yaml",
-    "deploy:mumbai": "graph deploy <<github-name>>/<<subgraph-name>> subgraph-mumbai.yaml --access-token <<access-token>> --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/"
+    "deploy:mumbai": "graph deploy <<github-name>>/<<subgraph-name>> subgraph-mumbai.yaml --access-token <<access-token>> --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/",
+    "codegen:goerli": "graph codegen -- subgraph-goerli.yaml",
+    "build:goerli": "graph build -- subgraph-goerli.yaml",
+    "deploy:goerli": "graph deploy <<github-name>>/<<subgraph-name>> subgraph-goerli.yaml --access-token <<access-token>> --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.20.1",
