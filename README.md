@@ -1,7 +1,6 @@
 # Uniswap V3 Staker Subgraph
 ## Note
-This repo is archived. New [github repository](https://github.com/msvstj/v3-subgraph](https://github.com/msvstj/v3-subgraph/tree/staking-only))
-is used for staking data.
+This repo is archived. New [github repository](https://github.com/msvstj/v3-subgraph/tree/staking-only) is used for staking data.
 
 ## About
 Fork of [vbstreetz](https://github.com/vbstreetz/uniswap-v3-staker-subgraph) staker subgraph repository. <br>
